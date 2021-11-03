@@ -1,0 +1,294 @@
+ 
+  ----jGRASP exec: java junit_runner.JgrRunner 59428 AutocompleteTest
+ Running 18 JUnit tests
+ 
+ Completed 18 tests  18 passed
+ 
+  ----jGRASP: operation complete.
+ 
+  ----jGRASP exec: java AutocompletorBenchmark
+ Opening - C:\Users\Hopkins\Documents\Code\Coursework\COMP-3270\project\code\autocomplete-start\data\fourletterwords.txt.
+ Found 456976 words
+ Time to initialize BruteAutoComplete - 0.0959668
+ Time to initialize Autocomplete.BinarySearchAutocomplete - 0.0358084
+ Time to initialize - Autocomplete.TrieAutocomplete - 0.1171371
+ Benchmarking Autocomplete$BruteAutocomplete...
+ Time for topMatch("") - 0.00261094
+ Time for topMatch("nenk") - 0.005631655518018018
+ Time for topMatch("n") - 0.0038110405
+ Time for topMatch("ne") - 0.0038932779
+ Time for topMatch("notarealword") - 0.006540975816993464
+ Time for topKMatches("", 1) -  0.006588692358366272
+ Time for topKMatches("", 4) -  0.0065062615084525354
+ Time for topKMatches("", 7) -  0.006643525498007968
+ Time for topKMatches("nenk", 1) -  0.0066054323645970935
+ Time for topKMatches("nenk", 4) -  0.006289956981132075
+ Time for topKMatches("nenk", 7) -  0.007124061965811966
+ Time for topKMatches("n", 1) -  0.006316922601010101
+ Time for topKMatches("n", 4) -  0.0063483734771573605
+ Time for topKMatches("n", 7) -  0.006265859022556391
+ Time for topKMatches("ne", 1) -  0.006251445
+ Time for topKMatches("ne", 4) -  0.006606341215323646
+ Time for topKMatches("ne", 7) -  0.006294532201257861
+ Time for topKMatches("notarealword", 1) -  0.006117638264058679
+ Time for topKMatches("notarealword", 4) -  0.00611188315018315
+ Time for topKMatches("notarealword", 7) -  0.006258150312891114
+ Benchmarking Autocomplete$BinarySearchAutocomplete...
+ Time for topMatch("") - 0.0016448006
+ Time for topMatch("nenk") - 3.1512E-6
+ Time for topMatch("n") - 6.34683E-5
+ Time for topMatch("ne") - 4.2815E-6
+ Time for topMatch("notarealword") - 1.38635E-5
+ Time for topKMatches("", 1) -  0.001559005
+ Time for topKMatches("", 4) -  0.0016786694
+ Time for topKMatches("", 7) -  0.0014277314
+ Time for topKMatches("nenk", 1) -  6.905E-7
+ Time for topKMatches("nenk", 4) -  6.882E-7
+ Time for topKMatches("nenk", 7) -  6.474E-7
+ Time for topKMatches("n", 1) -  4.96092E-5
+ Time for topKMatches("n", 4) -  5.26007E-5
+ Time for topKMatches("n", 7) -  5.15014E-5
+ Time for topKMatches("ne", 1) -  4.5088E-6
+ Time for topKMatches("ne", 4) -  5.0022E-6
+ Time for topKMatches("ne", 7) -  5.5489E-6
+ Time for topKMatches("notarealword", 1) -  3.0069E-6
+ Time for topKMatches("notarealword", 4) -  2.7617E-6
+ Time for topKMatches("notarealword", 7) -  2.8928E-6
+ Benchmarking Autocomplete$TrieAutocomplete...
+ Created 475255 nodes
+ Time for topMatch("") - 3.13258E-5
+ Time for topMatch("nenk") - 3.576E-7
+ Time for topMatch("n") - 8.1162E-6
+ Time for topMatch("ne") - 7.7551E-6
+ Time for topMatch("notarealword") - 3.789E-7
+ Time for topKMatches("", 1) -  1.95732E-5
+ Time for topKMatches("", 4) -  3.91305E-5
+ Time for topKMatches("", 7) -  5.09615E-5
+ Time for topKMatches("nenk", 1) -  9.533E-7
+ Time for topKMatches("nenk", 4) -  6.115E-7
+ Time for topKMatches("nenk", 7) -  6.073E-7
+ Time for topKMatches("n", 1) -  6.041E-6
+ Time for topKMatches("n", 4) -  2.47898E-5
+ Time for topKMatches("n", 7) -  4.53176E-5
+ Time for topKMatches("ne", 1) -  3.6904E-6
+ Time for topKMatches("ne", 4) -  7.526E-6
+ Time for topKMatches("ne", 7) -  2.31639E-5
+ Time for topKMatches("notarealword", 1) -  5.648E-7
+ Time for topKMatches("notarealword", 4) -  5.945E-7
+ Time for topKMatches("notarealword", 7) -  5.827E-7
+ 
+ *****************************************************************
+ Printing Summary of Results ...
+ 
+ *****************************************************************
+ prefix         , Brute          , Binary         , Trie
+           -------------------------------------------------------------------
+                ,    2.61094e-03,     1.64480e-03,     3.13258e-05
+ n_1            ,    6.31692e-03,     4.96092e-05,     6.04100e-06
+ n_4            ,    6.34837e-03,     5.26007e-05,     2.47898e-05
+ notarealword_7 ,    6.25815e-03,     2.89280e-06,     5.82700e-07
+ notarealword_1 ,    6.11764e-03,     3.00690e-06,     5.64800e-07
+ nenk           ,    5.63166e-03,     3.15120e-06,     3.57600e-07
+ n_7            ,    6.26586e-03,     5.15014e-05,     4.53176e-05
+ notarealword_4 ,    6.11188e-03,     2.76170e-06,     5.94500e-07
+ notarealword   ,    6.54098e-03,     1.38635e-05,     3.78900e-07
+ n              ,    3.81104e-03,     6.34683e-05,     8.11620e-06
+ nenk_1         ,    6.60543e-03,     6.90500e-07,     9.53300e-07
+ _1             ,    6.58869e-03,     1.55901e-03,     1.95732e-05
+ _4             ,    6.50626e-03,     1.67867e-03,     3.91305e-05
+ ne             ,    3.89328e-03,     4.28150e-06,     7.75510e-06
+ _7             ,    6.64353e-03,     1.42773e-03,     5.09615e-05
+ ne_1           ,    6.25145e-03,     4.50880e-06,     3.69040e-06
+ nenk_7         ,    7.12406e-03,     6.47400e-07,     6.07300e-07
+ ne_7           ,    6.29453e-03,     5.54890e-06,     2.31639e-05
+ nenk_4         ,    6.28996e-03,     6.88200e-07,     6.11500e-07
+ ne_4           ,    6.60634e-03,     5.00220e-06,     7.52600e-06
+                ,    2.61094e-03,     1.64480e-03,     3.13258e-05
+ n_1            ,    6.31692e-03,     4.96092e-05,     6.04100e-06
+ n_4            ,    6.34837e-03,     5.26007e-05,     2.47898e-05
+ notarealword_7 ,    6.25815e-03,     2.89280e-06,     5.82700e-07
+ notarealword_1 ,    6.11764e-03,     3.00690e-06,     5.64800e-07
+ nenk           ,    5.63166e-03,     3.15120e-06,     3.57600e-07
+ n_7            ,    6.26586e-03,     5.15014e-05,     4.53176e-05
+ notarealword_4 ,    6.11188e-03,     2.76170e-06,     5.94500e-07
+ notarealword   ,    6.54098e-03,     1.38635e-05,     3.78900e-07
+ n              ,    3.81104e-03,     6.34683e-05,     8.11620e-06
+ nenk_1         ,    6.60543e-03,     6.90500e-07,     9.53300e-07
+ _1             ,    6.58869e-03,     1.55901e-03,     1.95732e-05
+ _4             ,    6.50626e-03,     1.67867e-03,     3.91305e-05
+ ne             ,    3.89328e-03,     4.28150e-06,     7.75510e-06
+ _7             ,    6.64353e-03,     1.42773e-03,     5.09615e-05
+ ne_1           ,    6.25145e-03,     4.50880e-06,     3.69040e-06
+ nenk_7         ,    7.12406e-03,     6.47400e-07,     6.07300e-07
+ ne_7           ,    6.29453e-03,     5.54890e-06,     2.31639e-05
+ nenk_4         ,    6.28996e-03,     6.88200e-07,     6.11500e-07
+ ne_4           ,    6.60634e-03,     5.00220e-06,     7.52600e-06
+                ,    2.61094e-03,     1.64480e-03,     3.13258e-05
+ n_1            ,    6.31692e-03,     4.96092e-05,     6.04100e-06
+ n_4            ,    6.34837e-03,     5.26007e-05,     2.47898e-05
+ notarealword_7 ,    6.25815e-03,     2.89280e-06,     5.82700e-07
+ notarealword_1 ,    6.11764e-03,     3.00690e-06,     5.64800e-07
+ nenk           ,    5.63166e-03,     3.15120e-06,     3.57600e-07
+ n_7            ,    6.26586e-03,     5.15014e-05,     4.53176e-05
+ notarealword_4 ,    6.11188e-03,     2.76170e-06,     5.94500e-07
+ notarealword   ,    6.54098e-03,     1.38635e-05,     3.78900e-07
+ n              ,    3.81104e-03,     6.34683e-05,     8.11620e-06
+ nenk_1         ,    6.60543e-03,     6.90500e-07,     9.53300e-07
+ _1             ,    6.58869e-03,     1.55901e-03,     1.95732e-05
+ _4             ,    6.50626e-03,     1.67867e-03,     3.91305e-05
+ ne             ,    3.89328e-03,     4.28150e-06,     7.75510e-06
+ _7             ,    6.64353e-03,     1.42773e-03,     5.09615e-05
+ ne_1           ,    6.25145e-03,     4.50880e-06,     3.69040e-06
+ nenk_7         ,    7.12406e-03,     6.47400e-07,     6.07300e-07
+ ne_7           ,    6.29453e-03,     5.54890e-06,     2.31639e-05
+ nenk_4         ,    6.28996e-03,     6.88200e-07,     6.11500e-07
+ ne_4           ,    6.60634e-03,     5.00220e-06,     7.52600e-06
+ 
+  ----jGRASP: operation complete.
+ 
+  ----jGRASP exec: java -jar C:\Users\Hopkins\Documents\Code\Coursework\COMP-3270\project\code\autocomplete-start\src\Autocomplete Project.jar
+ no main manifest attribute, in C:\Users\Hopkins\Documents\Code\Coursework\COMP-3270\project\code\autocomplete-start\src\Autocomplete Project.jar
+ 
+  ----jGRASP wedge2: exit code for process is 1.
+  ----jGRASP: operation complete.
+ 
+  ----jGRASP exec: java AutocompletorBenchmark
+ Opening - C:\Users\Hopkins\Documents\Code\Coursework\COMP-3270\project\code\autocomplete-start\data\fourletterwordshalf.txt.
+ Found 228488 words
+ Time to initialize BruteAutoComplete - 0.0780842
+ Time to initialize Autocomplete.BinarySearchAutocomplete - 0.041679
+ Time to initialize - Autocomplete.TrieAutocomplete - 0.0507229
+ Benchmarking Autocomplete$BruteAutocomplete...
+ Time for topMatch("") - 7.93192E-4
+ Time for topMatch("aenk") - 0.0024066302
+ Time for topMatch("a") - 7.102862E-4
+ Time for topMatch("ae") - 7.258233E-4
+ Time for topMatch("notarealword") - 0.0020828472
+ Time for topKMatches("", 1) -  0.0024975313
+ Time for topKMatches("", 4) -  0.0027147415
+ Time for topKMatches("", 7) -  0.0024348439
+ Time for topKMatches("aenk", 1) -  0.0022985262
+ Time for topKMatches("aenk", 4) -  0.0022971493
+ Time for topKMatches("aenk", 7) -  0.0022930411
+ Time for topKMatches("a", 1) -  0.002311172
+ Time for topKMatches("a", 4) -  0.0023224378
+ Time for topKMatches("a", 7) -  0.0023518661
+ Time for topKMatches("ae", 1) -  0.0023238005
+ Time for topKMatches("ae", 4) -  0.002277819
+ Time for topKMatches("ae", 7) -  0.002351437
+ Time for topKMatches("notarealword", 1) -  0.0022235945
+ Time for topKMatches("notarealword", 4) -  0.002209688
+ Time for topKMatches("notarealword", 7) -  0.0022145545
+ Benchmarking Autocomplete$BinarySearchAutocomplete...
+ Time for topMatch("") - 4.070085E-4
+ Time for topMatch("aenk") - 1.5081E-6
+ Time for topMatch("a") - 1.868E-5
+ Time for topMatch("ae") - 2.0713E-6
+ Time for topMatch("notarealword") - 4.2673E-6
+ Time for topKMatches("", 1) -  7.57706E-4
+ Time for topKMatches("", 4) -  7.004848E-4
+ Time for topKMatches("", 7) -  7.051846E-4
+ Time for topKMatches("aenk", 1) -  5.292E-7
+ Time for topKMatches("aenk", 4) -  5.201E-7
+ Time for topKMatches("aenk", 7) -  5.338E-7
+ Time for topKMatches("a", 1) -  4.88237E-5
+ Time for topKMatches("a", 4) -  5.20554E-5
+ Time for topKMatches("a", 7) -  4.99969E-5
+ Time for topKMatches("ae", 1) -  4.9957E-6
+ Time for topKMatches("ae", 4) -  4.598E-6
+ Time for topKMatches("ae", 7) -  4.3787E-6
+ Time for topKMatches("notarealword", 1) -  1.6784E-6
+ Time for topKMatches("notarealword", 4) -  1.8228E-6
+ Time for topKMatches("notarealword", 7) -  1.6135E-6
+ Benchmarking Autocomplete$TrieAutocomplete...
+ Created 237628 nodes
+ Time for topMatch("") - 3.04828E-5
+ Time for topMatch("aenk") - 3.098E-7
+ Time for topMatch("a") - 1.02379E-5
+ Time for topMatch("ae") - 8.0559E-6
+ Time for topMatch("notarealword") - 9.11E-8
+ Time for topKMatches("", 1) -  1.40234E-5
+ Time for topKMatches("", 4) -  2.65375E-5
+ Time for topKMatches("", 7) -  3.64314E-5
+ Time for topKMatches("aenk", 1) -  7.174E-7
+ Time for topKMatches("aenk", 4) -  4.496E-7
+ Time for topKMatches("aenk", 7) -  3.697E-7
+ Time for topKMatches("a", 1) -  6.5959E-6
+ Time for topKMatches("a", 4) -  1.93365E-5
+ Time for topKMatches("a", 7) -  1.318666E-4
+ Time for topKMatches("ae", 1) -  3.8107E-6
+ Time for topKMatches("ae", 4) -  7.8996E-6
+ Time for topKMatches("ae", 7) -  1.44345E-5
+ Time for topKMatches("notarealword", 1) -  1.142E-7
+ Time for topKMatches("notarealword", 4) -  1.052E-7
+ Time for topKMatches("notarealword", 7) -  1.057E-7
+ 
+ *****************************************************************
+ Printing Summary of Results ...
+ 
+ *****************************************************************
+ prefix         , Brute          , Binary         , Trie
+           -------------------------------------------------------------------
+                ,    7.93192e-04,     4.07009e-04,     3.04828e-05
+ a              ,    7.10286e-04,     1.86800e-05,     1.02379e-05
+ notarealword_7 ,    2.21455e-03,     1.61350e-06,     1.05700e-07
+ ae             ,    7.25823e-04,     2.07130e-06,     8.05590e-06
+ notarealword_1 ,    2.22359e-03,     1.67840e-06,     1.14200e-07
+ notarealword_4 ,    2.20969e-03,     1.82280e-06,     1.05200e-07
+ notarealword   ,    2.08285e-03,     4.26730e-06,     9.11000e-08
+ aenk           ,    2.40663e-03,     1.50810e-06,     3.09800e-07
+ aenk_7         ,    2.29304e-03,     5.33800e-07,     3.69700e-07
+ ae_7           ,    2.35144e-03,     4.37870e-06,     1.44345e-05
+ _1             ,    2.49753e-03,     7.57706e-04,     1.40234e-05
+ a_1            ,    2.31117e-03,     4.88237e-05,     6.59590e-06
+ ae_4           ,    2.27782e-03,     4.59800e-06,     7.89960e-06
+ _4             ,    2.71474e-03,     7.00485e-04,     2.65375e-05
+ a_4            ,    2.32244e-03,     5.20554e-05,     1.93365e-05
+ _7             ,    2.43484e-03,     7.05185e-04,     3.64314e-05
+ a_7            ,    2.35187e-03,     4.99969e-05,     1.31867e-04
+ aenk_1         ,    2.29853e-03,     5.29200e-07,     7.17400e-07
+ ae_1           ,    2.32380e-03,     4.99570e-06,     3.81070e-06
+ aenk_4         ,    2.29715e-03,     5.20100e-07,     4.49600e-07
+                ,    7.93192e-04,     4.07009e-04,     3.04828e-05
+ a              ,    7.10286e-04,     1.86800e-05,     1.02379e-05
+ notarealword_7 ,    2.21455e-03,     1.61350e-06,     1.05700e-07
+ ae             ,    7.25823e-04,     2.07130e-06,     8.05590e-06
+ notarealword_1 ,    2.22359e-03,     1.67840e-06,     1.14200e-07
+ notarealword_4 ,    2.20969e-03,     1.82280e-06,     1.05200e-07
+ notarealword   ,    2.08285e-03,     4.26730e-06,     9.11000e-08
+ aenk           ,    2.40663e-03,     1.50810e-06,     3.09800e-07
+ aenk_7         ,    2.29304e-03,     5.33800e-07,     3.69700e-07
+ ae_7           ,    2.35144e-03,     4.37870e-06,     1.44345e-05
+ _1             ,    2.49753e-03,     7.57706e-04,     1.40234e-05
+ a_1            ,    2.31117e-03,     4.88237e-05,     6.59590e-06
+ ae_4           ,    2.27782e-03,     4.59800e-06,     7.89960e-06
+ _4             ,    2.71474e-03,     7.00485e-04,     2.65375e-05
+ a_4            ,    2.32244e-03,     5.20554e-05,     1.93365e-05
+ _7             ,    2.43484e-03,     7.05185e-04,     3.64314e-05
+ a_7            ,    2.35187e-03,     4.99969e-05,     1.31867e-04
+ aenk_1         ,    2.29853e-03,     5.29200e-07,     7.17400e-07
+ ae_1           ,    2.32380e-03,     4.99570e-06,     3.81070e-06
+ aenk_4         ,    2.29715e-03,     5.20100e-07,     4.49600e-07
+                ,    7.93192e-04,     4.07009e-04,     3.04828e-05
+ a              ,    7.10286e-04,     1.86800e-05,     1.02379e-05
+ notarealword_7 ,    2.21455e-03,     1.61350e-06,     1.05700e-07
+ ae             ,    7.25823e-04,     2.07130e-06,     8.05590e-06
+ notarealword_1 ,    2.22359e-03,     1.67840e-06,     1.14200e-07
+ notarealword_4 ,    2.20969e-03,     1.82280e-06,     1.05200e-07
+ notarealword   ,    2.08285e-03,     4.26730e-06,     9.11000e-08
+ aenk           ,    2.40663e-03,     1.50810e-06,     3.09800e-07
+ aenk_7         ,    2.29304e-03,     5.33800e-07,     3.69700e-07
+ ae_7           ,    2.35144e-03,     4.37870e-06,     1.44345e-05
+ _1             ,    2.49753e-03,     7.57706e-04,     1.40234e-05
+ a_1            ,    2.31117e-03,     4.88237e-05,     6.59590e-06
+ ae_4           ,    2.27782e-03,     4.59800e-06,     7.89960e-06
+ _4             ,    2.71474e-03,     7.00485e-04,     2.65375e-05
+ a_4            ,    2.32244e-03,     5.20554e-05,     1.93365e-05
+ _7             ,    2.43484e-03,     7.05185e-04,     3.64314e-05
+ a_7            ,    2.35187e-03,     4.99969e-05,     1.31867e-04
+ aenk_1         ,    2.29853e-03,     5.29200e-07,     7.17400e-07
+ ae_1           ,    2.32380e-03,     4.99570e-06,     3.81070e-06
+ aenk_4         ,    2.29715e-03,     5.20100e-07,     4.49600e-07
+ 
+  ----jGRASP: operation complete.
+ 
